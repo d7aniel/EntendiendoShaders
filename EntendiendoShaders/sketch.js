@@ -61,26 +61,28 @@ function setOpciones(primerSet = false) {
   let opciones = document.getElementById("opciones");
   opciones.innerHTML = "";
   let cont = 0;
-  for (let nom of Object.keys(shaders[cual])) {
+  for (let i = 0; i < shaders[cual].length; i++) {
+    //nom of Object.keys(shaders[cual])) {
+    let nom = "" + i;
     let d = document.createElement("div");
-    let i = document.createElement("input");
-    i.type = "radio";
-    i.value = nom;
-    i.name = "opcion";
+    let input = document.createElement("input");
+    input.type = "radio";
+    input.value = nom;
+    input.name = "opcion";
     if (cont == 0) {
-      i.checked = "checked";
+      input.checked = "checked";
       cual_cual = nom;
       iniciar();
     }
-    i.addEventListener("input", (event) => {
-      cual_cual = i.value;
+    input.addEventListener("input", (event) => {
+      cual_cual = input.value;
       iniciar();
     });
     let label = document.createElement("label");
     label.for = nom;
     label.innerHTML = shaders[cual][nom].nombre;
     label.style.color = "white";
-    d.appendChild(i);
+    d.appendChild(input);
     d.appendChild(label);
     opciones.appendChild(d);
     cont++;
@@ -107,7 +109,7 @@ function iniciar() {
     let a = shaders[cual][cual_cual].archivos[i];
     // shaderEjecucion.push(new ShaderConGraf(`shaders/${cual}/${cual_cual}/${a}`, width, height, WEBGL));
     shaderEjecucion.push(passes[i]);
-    shaderEjecucion[i].setShader(`shaders/${cual}/${cual_cual}/${a}`);
+    shaderEjecucion[i].setShader(`shaders/${a}`);
     shaderEjecucion[i].inicializar();
     if (i == shaders[cual][cual_cual].archivos.length - 1) {
       shaderEjecucion.at(-1).cargarTexto(textoCargado, errorCargandoTexto);
