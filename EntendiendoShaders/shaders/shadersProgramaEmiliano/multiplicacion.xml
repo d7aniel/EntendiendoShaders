@@ -1,0 +1,7 @@
+<?xml version="1.0"?>
+<shader nombre='multiplicacion' archivo='multiplicacion.glsl' time='no' mouse='no'>
+    <entradas>
+        <in tipo='sampler2D' nombre='in_graf_1'></in>
+        <in tipo='sampler2D' nombre='in_graf_2'></in>
+    </entradas>
+</shader>

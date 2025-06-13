@@ -43,6 +43,6 @@ void main() {
 
  	vec3 col = palette( float(iteracion)/float(maxIteraciones), vec3(0.405,0.31,0.22), vec3(0.465,0.305,0.715), vec3(1.0,1.0,0.5), vec3(0.74,0.865,0.125) );
    
-    gl_FragColor=vec4(col,1.);
+    gl_FragColor=vec4(vec3(float(iteracion)/float(maxIteraciones)),1.);
 	
 }

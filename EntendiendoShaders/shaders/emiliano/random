@@ -1,0 +1,12 @@
+
+float random1f(float co) {
+  return fract(sin(dot(vec2(co,co),vec2(12.9898, 8.573))) * 43758.5453);
+}
+
+float random1fv2(vec2 co) {
+  return fract(sin(dot(co,vec3(12.9898, 78.233))) * 43758.5453);
+}
+
+float random1fv3(vec3 co) {
+  return fract(sin(dot(co,vec3(12.9898, 78.233, 8.573))) * 43758.5453);
+}

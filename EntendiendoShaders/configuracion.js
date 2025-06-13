@@ -37,28 +37,46 @@ let shaders = {
       archivos: ["gblur.frag"],
     },
   ],
-  voronoi_simple: [
+  voronoi: [
     {
       nombre: "voronoi",
-      archivos: ["1_identidad.frag", "voronoi/voronoi_simple.frag"],
+      archivos: ["voronoi/voronoi_simple.frag"],
     },
     {
-      nombre: "sqrt(voronoi)",
-      archivos: ["1_identidad.frag", "voronoi/voronoi_sqrt.frag"],
+      nombre: "voronoi bloom)",
+      archivos: ["voronoi/voronoi_bloom.frag"],
     },
     {
-      nombre: "0.02/voronoi",
-      archivos: ["1_identidad.frag", "voronoi/1_div_voronoi.frag"],
+      nombre: "voronoi borde econ.",
+      archivos: ["voronoi/voronoi_borde_light.frag"],
     },
     {
-      nombre: "pow(voronoi,1/10)",
-      archivos: ["1_identidad.frag", "voronoi/pow_of_voronoi.frag"],
+      nombre: "voronoi borde mejorado",
+      archivos: ["voronoi/voronoi_borde_proj.frag"],
+    },
+    {
+      nombre: "voronoi borde pro",
+      archivos: ["voronoi/voronoi_borde_proj_pro.frag"],
+    },
+    {
+      nombre: "voronoi ID",
+      archivos: ["voronoi/voronoi_id.frag"],
+    },
+    {
+      nombre: "voronoi filtro",
+      archivos: ["1_identidad.frag", "voronoi/voronoi_filtro.frag"],
     },
   ],
   fractales: [
     {
       nombre: "Conjunto de julia",
       archivos: ["cJulia.frag"],
+    },
+  ],
+  noise: [
+    {
+      nombre: "Noise de valor",
+      archivos: ["noise_value.frag"],
     },
   ],
 };

@@ -1,0 +1,4 @@
+// esta no tiene continuidad solo devuelve colores al azar
+vec3 palette2( float f, vec3 c_rand ){
+    return 0.5 + 0.5*sin( random1f(f+vec2(7.0,113.0))*2.5 + 3.5 + c_rand);
+}

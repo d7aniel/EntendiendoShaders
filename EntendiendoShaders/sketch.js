@@ -132,7 +132,8 @@ function dibujar() {
       shaderEjecucion[i].actualizar();
     }
   }
+  // textureMode(NORMAL);
+  // image(shaderEjecucion[shaderEjecucion.length - 1].out(), 0, 0);
   texture(shaderEjecucion[shaderEjecucion.length - 1].out());
-  // texture(grafIn);
   rect(-width / 2, -height / 2, width, height);
 }

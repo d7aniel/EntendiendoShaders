@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+<shader nombre='paleta1' archivo='paleta1.glsl' time='no' mouse='no'>
+    <entradas>
+        <in tipo='sampler2D' nombre='in_graf'></in>
+    </entradas>
+    <parametros>
+        <param tipo='vec2' nombre='a' valor='0.405,0.31,0.32'></param>
+        <param tipo='vec2' nombre='b' valor='0.465,0.305,0.715'></param>
+        <param tipo='vec2' nombre='c' valor='0.74,0.865,0.125'></param>
+    </parametros>
+</shader>

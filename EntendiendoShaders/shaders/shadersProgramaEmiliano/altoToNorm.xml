@@ -1,0 +1,6 @@
+<?xml version="1.0"?>
+<shader nombre='altoToNorm' archivo='altoToNorm.glsl' time='no' mouse='no'>
+    <entradas>
+        <in tipo='sampler2D' nombre='in_graf'></in>
+    </entradas>
+</shader>

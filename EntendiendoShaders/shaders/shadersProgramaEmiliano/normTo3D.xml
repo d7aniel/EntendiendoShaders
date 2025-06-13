@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<shader nombre='normTo3D' archivo='normTo3D.glsl' time='no' mouse='no'>
+    <entradas>
+        <in tipo='sampler2D' nombre='in_graf'></in>
+    </entradas>
+    <parametros>
+        <param tipo='vec2' nombre='luz' valor='0.5,0.5'></param>
+    </parametros>
+</shader>

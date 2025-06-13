@@ -11,7 +11,8 @@ vec2 random2f(vec2 co) {
   return vec2(fract(sin(dot(co,vec2(12.9898, 78.233))) * 43758.5453),fract(sin(dot(co,vec2(45.9898, 15.765))) * 43758.5453));
 }
 
-float voronoi( vec2 x ){
+float voronoi( vec2 x )
+{
     vec2 p = floor( x );
     vec2  f = fract( x );
 
@@ -32,6 +33,6 @@ float voronoi( vec2 x ){
 void main(){
 	vec2 uv=(gl_FragCoord.xy/u_resolution.xy);
 	float escalaNoise=10.;		
-	float f =voronoi(uv.xy*escalaNoise);
+	float f =0.4/(1.-min(voronoi(uv.xy*escalaNoise),1.));
 	gl_FragColor=vec4(vec3(f),1.);
 }
